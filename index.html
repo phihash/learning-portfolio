@@ -4,25 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Learning Portfolio</title>
+  <title>Learning Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body v-cloak>
 <div class="SiteWapper">
-  <header>
-    <h1 class="site-title">My Learning Portfolio</h1>
+  <header class="header">
+    <h1 class="site-title">Learning Portfolio</h1>
     <nav>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><button @click="isShow = 'Review'">Review</button></li>
+        <li><button @click="isShow = 'Link'">Link</button></li>
+        <li><button @click="isShow = 'Summary'">Summary</button></li>
       </ul>
     </nav>
   </header>
   <main>
+    <h3>{{isShow }}を表示中です</h3>
+    <template v-if="isShow === 'Review'">
+      <p>Review</p>
+    </template>
 
+    <template v-else-if="isShow ==='Link'">
+      <p>Link</p>
+    </template>
+
+    <template v-else>
+      <p>Summary</p>
+    </template>
   </main>
-  <footer>
-    <small>&copy; </small>
+  <footer class="footer">
+    <small>&copy; 2022 phihash</small>
   </footer>
   <script src="https://unpkg.com/petite-vue"></script>
   <script src="index.js"></script>
