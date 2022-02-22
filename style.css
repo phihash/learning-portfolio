@@ -12,3 +12,22 @@
 button{
   cursor: pointer;
 }
+
+.header{
+  display: flex;
+}
+
+.site-title{
+  padding: 1rem;
+}
+
+.global-nav-list{
+  display: flex;
+}
+
+.footer{
+  padding: 2rem;
+  padding-top: 1.2rem;
+  background-color: gainsboro;
+  text-align: center;
+}
