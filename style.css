@@ -13,9 +13,12 @@ button{
   cursor: pointer;
 }
 
-.header{
-  display: flex;
-}
+/* ここまで全体 */
+
+
+/* header */
+
+
 
 .site-title{
   padding: 1rem;
@@ -24,6 +27,19 @@ button{
 .global-nav-list{
   display: flex;
 }
+
+.global-nav-list button{
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width:767px) { /*PC設定*/
+  .header{
+    display: flex;
+  }
+}
+
+/* footer */
 
 .footer{
   padding: 2rem;
