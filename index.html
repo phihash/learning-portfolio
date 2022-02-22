@@ -12,7 +12,7 @@
   <header class="header">
     <h1 class="site-title">Learning Portfolio</h1>
     <nav>
-      <ul>
+      <ul class="global-nav-list">
         <li><button @click="isShow = 'Review'">Review</button></li>
         <li><button @click="isShow = 'Link'">Link</button></li>
         <li><button @click="isShow = 'Summary'">Summary</button></li>
@@ -23,6 +23,7 @@
     <h3>{{isShow }}を表示中です</h3>
     <template v-if="isShow === 'Review'">
       <p>Review</p>
+
     </template>
 
     <template v-else-if="isShow ==='Link'">
@@ -31,6 +32,15 @@
 
     <template v-else>
       <p>Summary</p>
+      <ul>
+        <li><button>呼吸器</button></li>
+        <li><button>麻酔科</button></li>
+        <li><button>産婦人科</button></li>
+        <li><button>小児科</button></li>
+        <li><button>整形外科</button></li>
+        <li><button>血液内科</button></li>
+        <li><button>リウマチ</button></li>
+      </ul>
     </template>
   </main>
   <footer class="footer">
